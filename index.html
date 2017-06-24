@@ -161,7 +161,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/18/first-hexo-blog/">First Hexo</a>
+      <a class="article-title" href="/2017/06/18/first-hexo-blog/">First Hexo Blog</a>
     </h1>
   
 
@@ -189,7 +189,7 @@
 <p>So everytime you made a change you could just run above deploy script rather than bunch of commands. So easy.<br>Another thing bothered me is everytime I push it will ask my username and password. If you dont want to input those everytime when you push you could do this. </p>
 <h3 id="Using-ssh-protocal-when-push-and-pull-from-git"><a href="#Using-ssh-protocal-when-push-and-pull-from-git" class="headerlink" title="Using ssh protocal when push and pull from git"></a>Using ssh protocal when push and pull from git</h3><p>First you need to set your public key in your github profile setting. You may find your public key by typing. Then copy it to your github ssh key setting.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cat ~/.ssh/id_rsa.pub</div></pre></td></tr></table></figure></p>
 <p>Then you need to make sure in your local you’re using ssh rather than https to push and pull.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git remote -v</div><div class="line"><span class="comment">#if the result of above command is using url start with https, then you need to change it by using below command</span></div><div class="line">$ git remote <span class="built_in">set</span>-url origin &lt;git@yourdomain.com&gt;</div></pre></td></tr></table></figure></p>
-<p>Set git@ instead of https:// in above command. </p>
+<p>Set <em>git@</em> instead of <em>https://</em> in above command. </p>
 <p>Now have fun with your hexo~ :)</p>
 
       
