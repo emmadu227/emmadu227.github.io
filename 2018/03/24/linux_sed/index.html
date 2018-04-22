@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="https://emmadu227.github.io">
   <title>Linux Command - sed | Welcome To Emma&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="sed is a stream edit tool. it will read line by line and execute command, print, and repeat for next line. Options-n silent, block defalut print;-e used for execute multiple sed command; ep. sed -e ‘/">
+  <meta name="description" content="sed is a stream edit tool. it will read line by line and execute command, print, and repeat for next line. Options1234-n silent, block defalut print;-e used for execute multiple sed command; ep. sed -">
 <meta name="keywords" content="linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux Command - sed">
 <meta property="og:url" content="https://emmadu227.github.io/2018/03/24/linux_sed/index.html">
 <meta property="og:site_name" content="Welcome To Emma&#39;s Blog">
-<meta property="og:description" content="sed is a stream edit tool. it will read line by line and execute command, print, and repeat for next line. Options-n silent, block defalut print;-e used for execute multiple sed command; ep. sed -e ‘/">
-<meta property="og:updated_time" content="2018-03-24T02:48:48.044Z">
+<meta property="og:description" content="sed is a stream edit tool. it will read line by line and execute command, print, and repeat for next line. Options1234-n silent, block defalut print;-e used for execute multiple sed command; ep. sed -">
+<meta property="og:updated_time" content="2018-04-21T10:55:23.369Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux Command - sed">
-<meta name="twitter:description" content="sed is a stream edit tool. it will read line by line and execute command, print, and repeat for next line. Options-n silent, block defalut print;-e used for execute multiple sed command; ep. sed -e ‘/">
+<meta name="twitter:description" content="sed is a stream edit tool. it will read line by line and execute command, print, and repeat for next line. Options1234-n silent, block defalut print;-e used for execute multiple sed command; ep. sed -">
   
     <link rel="alternative" href="/atom.xml" title="Welcome To Emma&#39;s Blog" type="application/atom+xml">
   
@@ -193,7 +193,18 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>sed is a stream edit tool. it will read line by line and execute command, print, and repeat for next line.</p>
-<p>Options<br>-n silent, block defalut print;<br>-e used for execute multiple sed command; ep. sed -e ‘/apple/d’ -e ‘w output.txt’ input.txt<br>-f sed script; ep. sed -f ‘sed_command.sed’ input.txt<br>-i directly change original file. </p>
+<h2 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">-n silent, block defalut print;</div><div class="line">-e used for execute multiple sed command; ep. sed -e &apos;/apple/d&apos; -e &apos;w output.txt&apos; input.txt</div><div class="line">-f sed script; ep. sed -f &apos;sed_command.sed&apos; input.txt </div><div class="line">-i directly change original file.</div></pre></td></tr></table></figure>
+<h2 id="Sed-Command"><a href="#Sed-Command" class="headerlink" title="Sed Command"></a>Sed Command</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">d delete</div><div class="line">s substitude ; s/original/new/&lt;flag&gt;; flag is optional and include(g,i,p,w,e,numbers) </div><div class="line">	g - gloabal-all match in one line</div><div class="line">	i - ignore capital</div><div class="line">	p - print replaced lines</div><div class="line">	w - write replaced lines to output file</div><div class="line">	e - execute command. the lines just replaced something will be treated as command and be executed</div><div class="line">	numbers - ep. 2 means the second match in each line should be replaced</div><div class="line">p print matched line</div><div class="line">w &lt;outputfile&gt; write matched content to outputfile</div></pre></td></tr></table></figure>
+<h2 id="Sed-Character-Set"><a href="#Sed-Character-Set" class="headerlink" title="Sed Character Set"></a>Sed Character Set</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">^ line start</div><div class="line">$ line end</div><div class="line">. 1 character except \n</div><div class="line">* repeat 0 or n times previous char</div><div class="line">\+ repeat 1 or more times previous char</div><div class="line">\? repeat 0 or 1 times previous char</div><div class="line">[] match specified range; ep. [sS]ed match sed and Sed</div><div class="line">[^] not contains</div><div class="line">\(...\) match sub string; ep. s/\(love\)able/\1rs the first loveable will be replaced as lovers.</div><div class="line">&amp; stands for the matched string; ep. s/love/**&amp;**/ love is replaced into **love**</div><div class="line">x\&#123;m,n\&#125; match lines that contains m to n times x strings or characters. ep. /0\&#123;5\&#125;/ match lines have five 0s. /0\&#123;5,\&#125;/ match lines have at least five 0s. /0\&#123;5,10\&#125;/ match lines have five to ten 0s</div></pre></td></tr></table></figure>
+<h2 id="Usage-Examples"><a href="#Usage-Examples" class="headerlink" title="Usage Examples"></a>Usage Examples</h2><h3 id="Change-Match-Range"><a href="#Change-Match-Range" class="headerlink" title="Change Match Range"></a>Change Match Range</h3><p>m,n means m to n<br>m,+n means start from m and next n lines<br>m~n means start from m and skip n lines</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#Print odd number lines</div><div class="line">sed -n &apos;1~2 p&apos; inputfile</div><div class="line"></div><div class="line">#Print lines contains &apos;Rate&apos; and two lines followed, &quot;,&quot; in the middle means from lines contains /Rate/ TO the next two lines. But it doesn&apos;t support previous lines like &apos;-1 p&apos;, so will need to use cache command h,n</div><div class="line">sed -n &apos;/Rate/, +2 p&apos;</div></pre></td></tr></table></figure>
+<h3 id="Substitude-file-path"><a href="#Substitude-file-path" class="headerlink" title="Substitude file path"></a>Substitude file path</h3><p>when using s to replace file path we have to add ‘\’ before every ‘/‘ like this:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed &apos;s/\/usr\/local\/bin/\/user\/bin/&apos; path.txt</div></pre></td></tr></table></figure></p>
+<p>It’s a little confusing when the path is a very long one. So we can use one of “|,@,^,!” to replace division character ‘/‘ to simplify the command like this:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed &apos;s|/usr/local/bin|/user/bin/|&apos; path.txt</div></pre></td></tr></table></figure></p>
+<h3 id="Usage-of-‘-amp-’"><a href="#Usage-of-‘-amp-’" class="headerlink" title="Usage of ‘&amp;’"></a>Usage of ‘&amp;’</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#put every lines into &lt;&gt;</div><div class="line">sed &apos;s/^.*/&lt;&amp;&gt;/&apos; inputfile</div></pre></td></tr></table></figure>
+<h3 id="Group-match-using"><a href="#Group-match-using" class="headerlink" title="Group match using ()"></a>Group match using ()</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">#Replace first group not contains &apos;,&apos;</div><div class="line">sed &apos;s/\([^,]*\).*/\1/&apos; outputfile</div><div class="line"></div><div class="line">#If word first char is in capital then add () by sides.</div><div class="line">echo &quot;The Geek Stuff&quot;| sed &apos;s/\(\b[A-Z]\)/\(\1\)/g&apos;</div><div class="line">(T)he (G)eek (S)tuff</div><div class="line"></div><div class="line">#formatting numbers: match lines have at least 4 numbers and only 1 non number/.</div><div class="line">sed &apos;s/\(^\|[^0-9.]\)\([0-9]\+\)\([0-9]&#123;3&#125;\)/\1\2,\3/g&apos;</div></pre></td></tr></table></figure>
+<p>#not print lines contains the word<br>sed ‘/rate/!p’ file</p>
+<p>#backup file before insert<br>sed -ibak ‘s/John/Johnny/‘ employee.txt</p>
+<p>#print invisible character(such as \t and eof $ will be print out)<br>sed -n ‘l’ test1.sh</p>
 
       
 
@@ -302,6 +313,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/04/21/linux_vim/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Linux Vim Useful Command
+        
+      </div>
+    </a>
   
   
     <a href="/2017/09/25/java-class/" id="article-nav-older" class="article-nav-link-wrap">

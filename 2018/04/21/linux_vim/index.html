@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://emmadu227.github.io">
-  <title>Welcome To Emma&#39;s Blog</title>
+  <title>Linux Vim Useful Command | Welcome To Emma&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="This is her first successfully self-set-up blog and she&apos;s very exited.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Welcome To Emma&#39;s Blog">
-<meta property="og:url" content="https://emmadu227.github.io/index.html">
+  <meta name="description" content="##Search ###Using \c to do case insensitive search “keyword”1/keyword\c ###Using * search current word">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux Vim Useful Command">
+<meta property="og:url" content="https://emmadu227.github.io/2018/04/21/linux_vim/index.html">
 <meta property="og:site_name" content="Welcome To Emma&#39;s Blog">
-<meta property="og:description" content="This is her first successfully self-set-up blog and she&apos;s very exited.">
+<meta property="og:description" content="##Search ###Using \c to do case insensitive search “keyword”1/keyword\c ###Using * search current word">
+<meta property="og:updated_time" content="2018-04-22T02:21:36.262Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Welcome To Emma&#39;s Blog">
-<meta name="twitter:description" content="This is her first successfully self-set-up blog and she&apos;s very exited.">
+<meta name="twitter:title" content="Linux Vim Useful Command">
+<meta name="twitter:description" content="##Search ###Using \c to do case insensitive search “keyword”1/keyword\c ###Using * search current word">
   
     <link rel="alternative" href="/atom.xml" title="Welcome To Emma&#39;s Blog" type="application/atom+xml">
   
@@ -170,16 +172,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-linux_vim" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-linux_vim" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/21/linux_vim/">Linux Vim Useful Command</a>
+    <h1 class="article-title" itemprop="name">
+      Linux Vim Useful Command
     </h1>
   
 
@@ -199,76 +199,31 @@
       
 
       
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/21/linux_vim/">Read More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-linux_sed" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/24/linux_sed/">Linux Command - sed</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/24/linux_sed/" class="archive-article-date">
-  	<time datetime="2018-03-24T02:41:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>sed is a stream edit tool. it will read line by line and execute command, print, and repeat for next line.</p>
-<h2 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">-n silent, block defalut print;</div><div class="line">-e used for execute multiple sed command; ep. sed -e &apos;/apple/d&apos; -e &apos;w output.txt&apos; input.txt</div><div class="line">-f sed script; ep. sed -f &apos;sed_command.sed&apos; input.txt </div><div class="line">-i directly change original file.</div></pre></td></tr></table></figure>
-<h2 id="Sed-Command"><a href="#Sed-Command" class="headerlink" title="Sed Command"></a>Sed Command</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">d delete</div><div class="line">s substitude ; s/original/new/&lt;flag&gt;; flag is optional and include(g,i,p,w,e,numbers) </div><div class="line">	g - gloabal-all match in one line</div><div class="line">	i - ignore capital</div><div class="line">	p - print replaced lines</div><div class="line">	w - write replaced lines to output file</div><div class="line">	e - execute command. the lines just replaced something will be treated as command and be executed</div><div class="line">	numbers - ep. 2 means the second match in each line should be replaced</div><div class="line">p print matched line</div><div class="line">w &lt;outputfile&gt; write matched content to outputfile</div></pre></td></tr></table></figure>
-<h2 id="Sed-Character-Set"><a href="#Sed-Character-Set" class="headerlink" title="Sed Character Set"></a>Sed Character Set</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">^ line start</div><div class="line">$ line end</div><div class="line">. 1 character except \n</div><div class="line">* repeat 0 or n times previous char</div><div class="line">\+ repeat 1 or more times previous char</div><div class="line">\? repeat 0 or 1 times previous char</div><div class="line">[] match specified range; ep. [sS]ed match sed and Sed</div><div class="line">[^] not contains</div><div class="line">\(...\) match sub string; ep. s/\(love\)able/\1rs the first loveable will be replaced as lovers.</div><div class="line">&amp; stands for the matched string; ep. s/love/**&amp;**/ love is replaced into **love**</div><div class="line">x\&#123;m,n\&#125; match lines that contains m to n times x strings or characters. ep. /0\&#123;5\&#125;/ match lines have five 0s. /0\&#123;5,\&#125;/ match lines have at least five 0s. /0\&#123;5,10\&#125;/ match lines have five to ten 0s</div></pre></td></tr></table></figure>
-<h2 id="Usage-Examples"><a href="#Usage-Examples" class="headerlink" title="Usage Examples"></a>Usage Examples</h2><h3 id="Change-Match-Range"><a href="#Change-Match-Range" class="headerlink" title="Change Match Range"></a>Change Match Range</h3><p>m,n means m to n<br>m,+n means start from m and next n lines<br>m~n means start from m and skip n lines</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#Print odd number lines</div><div class="line">sed -n &apos;1~2 p&apos; inputfile</div><div class="line"></div><div class="line">#Print lines contains &apos;Rate&apos; and two lines followed, &quot;,&quot; in the middle means from lines contains /Rate/ TO the next two lines. But it doesn&apos;t support previous lines like &apos;-1 p&apos;, so will need to use cache command h,n</div><div class="line">sed -n &apos;/Rate/, +2 p&apos;</div></pre></td></tr></table></figure>
-<h3 id="Substitude-file-path"><a href="#Substitude-file-path" class="headerlink" title="Substitude file path"></a>Substitude file path</h3><p>when using s to replace file path we have to add ‘\’ before every ‘/‘ like this:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed &apos;s/\/usr\/local\/bin/\/user\/bin/&apos; path.txt</div></pre></td></tr></table></figure></p>
-<p>It’s a little confusing when the path is a very long one. So we can use one of “|,@,^,!” to replace division character ‘/‘ to simplify the command like this:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed &apos;s|/usr/local/bin|/user/bin/|&apos; path.txt</div></pre></td></tr></table></figure></p>
-<h3 id="Usage-of-‘-amp-’"><a href="#Usage-of-‘-amp-’" class="headerlink" title="Usage of ‘&amp;’"></a>Usage of ‘&amp;’</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#put every lines into &lt;&gt;</div><div class="line">sed &apos;s/^.*/&lt;&amp;&gt;/&apos; inputfile</div></pre></td></tr></table></figure>
-<h3 id="Group-match-using"><a href="#Group-match-using" class="headerlink" title="Group match using ()"></a>Group match using ()</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">#Replace first group not contains &apos;,&apos;</div><div class="line">sed &apos;s/\([^,]*\).*/\1/&apos; outputfile</div><div class="line"></div><div class="line">#If word first char is in capital then add () by sides.</div><div class="line">echo &quot;The Geek Stuff&quot;| sed &apos;s/\(\b[A-Z]\)/\(\1\)/g&apos;</div><div class="line">(T)he (G)eek (S)tuff</div><div class="line"></div><div class="line">#formatting numbers: match lines have at least 4 numbers and only 1 non number/.</div><div class="line">sed &apos;s/\(^\|[^0-9.]\)\([0-9]\+\)\([0-9]&#123;3&#125;\)/\1\2,\3/g&apos;</div></pre></td></tr></table></figure>
-<p>#not print lines contains the word<br>sed ‘/rate/!p’ file</p>
-<p>#backup file before insert<br>sed -ibak ‘s/John/Johnny/‘ employee.txt</p>
-<p>#print invisible character(such as \t and eof $ will be print out)<br>sed -n ‘l’ test1.sh</p>
-
-      
-
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>Thanks for treating me cake!<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="images/wechatQR.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -288,295 +243,85 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/24/linux_sed/">Read More >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://emmadu227.github.io/2018/04/21/linux_vim/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
   
-    <article id="post-java-class" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/25/java-class/">Java Class Basic</a>
-    </h1>
   
-
-        
-        <a href="/2017/09/25/java-class/" class="archive-article-date">
-  	<time datetime="2017-09-25T00:41:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Static<br>Static var and static method are shared by all instances of the class.</p>
-<p>JAVA Polymorphism<br>3 factors to implement polymorphism in Java:<br>1.inheritance relationship<br>2.override<br>3.parent reference point to children object</p>
-<p>In above factors, the first item also include interface implementation.<br>Because interface implement actually is a way to do muti-inheritance.<br>The reason they can do things like item 3 is due to all their children class will “inherit” all parent methods.</p>
-<p>```java<br>public class Duck{<br>    public Duck(){…}<br>    public quack(){…}<br>    public walk(){…}<br>}</p>
-<p>public class GreenHeadDuck extends Duck{<br>    public GreenHeadDuck(){…}<br>    public fly(){…}<br>}</p>
-<p>public class Main{<br>    public static void main(String[] args) {<br>        Duck greenDuck = new GreenHeadDuck();<br>        greenDuck.quack(); //Compiler approve<br>        greenDuck.fly();  //Compiler will reject this because can’t find fly() for reference type Duck.<br>    }<br>}<br>``<br>compiler decide whether a method could be called based on reference type but not the object.</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/25/java-class/">Read More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+    <a href="/2018/03/24/linux_sed/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Linux Command - sed</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
 
 
   
-    <article id="post-git" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/06/git/">Git Study</a>
-    </h1>
   
 
-        
-        <a href="/2017/08/06/git/" class="archive-article-date">
-  	<time datetime="2017-08-06T02:20:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Rebase and Merge</p>
-<p>We want the rebase to affect only the commits we’ve made to this branch, not the commits that exist on the upstream. To ensure that we only deal with the “local” commits, use:</p>
-<p>git rebase -i origin/master</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/06/git/">Read More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-python-basic-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/22/python-basic-1/">Python Basic-Part1</a>
-    </h1>
   
 
-        
-        <a href="/2017/07/22/python-basic-1/" class="archive-article-date">
-  	<time datetime="2017-07-22T02:27:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Basic-Knowledge-summary-of-python-Part-1-include-items-below"><a href="#Basic-Knowledge-summary-of-python-Part-1-include-items-below" class="headerlink" title="Basic Knowledge summary of python. Part 1 include items below:"></a>Basic Knowledge summary of python. Part 1 include items below:</h2><h3 id="list-tuple-dict-set"><a href="#list-tuple-dict-set" class="headerlink" title="list, tuple, dict, set"></a>list, tuple, dict, set</h3><h2 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h2><h3 id="可变参数函数"><a href="#可变参数函数" class="headerlink" title="可变参数函数"></a>可变参数函数</h3><p>Python允许你在list或tuple前面加一个<em>号，把list或tuple的元素变成可变参数传进去<br>nums=[1,2,3]<br>sum(</em>nums)</p>
-<p>dict 前加**把key和value一起以可变参数传入</p>
-<h2 id="Special-for-Python"><a href="#Special-for-Python" class="headerlink" title="Special for Python"></a>Special for Python</h2><h3 id="slice"><a href="#slice" class="headerlink" title="slice"></a>slice</h3><p>list /tuple/ string<br>[0:3] means get list[0]-&gt;list[2], Last will not included<br>[-2：-1] get last one<br>[:] copy a list<br>0 can be default so [:10] is equal to [0:10]<br>[:10:2] the third params means interval<br>list[::-1] copy this list and reverse<br>special case: because it’s getting value from left to right, so [-2:-1] will only get the last but one, while[-2:] doesn’t specify the end index so the last will also be included.</p>
-<h3 id="Iteration-for-dict"><a href="#Iteration-for-dict" class="headerlink" title="Iteration for dict"></a>Iteration for dict</h3><p>for k,v in d.items()<br>for k in d<br>for v in d.values()</p>
-<h3 id="enumerate-list"><a href="#enumerate-list" class="headerlink" title="enumerate(list)"></a>enumerate(list)</h3><p>this can change a list into form of index and value</p>
-<h3 id="List-Comprehensions"><a href="#List-Comprehensions" class="headerlink" title="List Comprehensions:"></a>List Comprehensions:</h3><p>[x*x for x in range(1,11)]<br>also can use two vars [k + ‘=’ + v for k,v in d.items()]</p>
-<h2 id="Higher-order-function"><a href="#Higher-order-function" class="headerlink" title="Higher-order function"></a>Higher-order function</h2><p>map(fun(), list[])<br>reduce(fun(), list[])<br>above two can accept two params: the first one is processing function and the second is as set of data(can be a list) to be processed by the function.</p>
-<p>lambda</p>
-<p>filter(fun(), list[])<br>sorted(list[])<br>or sorted(list[], key=fun())<br>or sorted(list[], key=fun(), reverse=True)</p>
-<h3 id="Closure"><a href="#Closure" class="headerlink" title="Closure"></a>Closure</h3><p>列表赋值的特殊<br>a, b = list[l1, l2]<br>means a = list[0] and b = list[1]</p>
-<h3 id="Decorator"><a href="#Decorator" class="headerlink" title="Decorator"></a>Decorator</h3><p>a function wrapper another function for doing something more but not change original function<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(func)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">(*args, **kw)</span>:</span></div><div class="line">        print(<span class="string">'call %s():'</span> % func.__name__)</div><div class="line">        <span class="keyword">return</span> func(*args, **kw)</div><div class="line">    <span class="keyword">return</span> wrapper</div><div class="line"></div><div class="line"><span class="meta">@log</span></div><div class="line">now():</div><div class="line">	print(<span class="string">'test'</span>)</div><div class="line"></div><div class="line">now()</div></pre></td></tr></table></figure></p>
-<h3 id="Partial-function"><a href="#Partial-function" class="headerlink" title="Partial function"></a>Partial function</h3><p>It’s a fuction that fix some params of an existing function to make it have a default params<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> functools</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>int2 = functools.partial(int, base=<span class="number">2</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>int2(<span class="string">'1000000'</span>)</div><div class="line"><span class="number">64</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>int2(<span class="string">'1010101'</span>)</div><div class="line"><span class="number">85</span></div></pre></td></tr></table></figure></p>
-<h2 id="Module"><a href="#Module" class="headerlink" title="Module"></a>Module</h2><p>a .py is a module</p>
-<p>If a module is called by another module, then it’s <strong>name</strong> will be itself; if directly run it, the <strong>name</strong> will be <strong>main</strong>. So we can use the way below to test only this module.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</div><div class="line">    test()</div></pre></td></tr></table></figure></p>
-<h2 id="Object-Oriented-Programming"><a href="#Object-Oriented-Programming" class="headerlink" title="Object Oriented Programming"></a>Object Oriented Programming</h2><h3 id="Object-Re-Functoin"><a href="#Object-Re-Functoin" class="headerlink" title="Object Re Functoin"></a>Object Re Functoin</h3><p>type()<br>instanceof()  used for check whether it’s an object or it’s on the inherit chain</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/22/python-basic-1/">Read More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-first-hexo-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/18/first-hexo-blog/">First Hexo Blog</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/18/first-hexo-blog/" class="archive-article-date">
-  	<time datetime="2017-06-18T11:17:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Something worth to be write down during setting up this blog:</p>
-<p>A very useful <a href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/" target="_blank" rel="external">blog</a> helped me successfully set up my hexo blog.  </p>
-<p>This is how my hexo works on Windows:</p>
-<h2 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> d:/hexo</div><div class="line">$ npm install hexo-cli -g</div><div class="line">$ hexo init blog</div><div class="line">$ <span class="built_in">cd</span> blog</div><div class="line">$ hexo generate <span class="comment"># or 'hexo g' for generate static pages in folder public locally</span></div><div class="line">$ hexo server <span class="comment"># or 'hexo s' for start the service locally http://localhost:4000/</span></div><div class="line">$ npm install hexo-deployer-git --save <span class="comment">#  Install plugin for git deployment</span></div></pre></td></tr></table></figure>
-<p>Now you can open <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> there will be a helloworld page shows.</p>
-<h2 id="Deploy-My-Hexo-to-GitHub"><a href="#Deploy-My-Hexo-to-GitHub" class="headerlink" title="Deploy My Hexo to GitHub"></a>Deploy My Hexo to GitHub</h2><p>Hexo command ‘hexo -d’ is supposed to do the deployment after modify configuration below</p>
-<h3 id="Modify-config-yml"><a href="#Modify-config-yml" class="headerlink" title="Modify _config.yml"></a>Modify _config.yml</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> <span class="string">git</span></div><div class="line"><span class="attr">  repo:</span> <span class="string">"https://github.com/username/username.github.io.git"</span></div><div class="line"><span class="attr">  branch:</span> <span class="string">master</span></div></pre></td></tr></table></figure>
-<p>But I encountered many problems directly using ‘hexo -d’. So I changed the way my hexo deploy to github according to what is suggested in the <a href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/" target="_blank" rel="external">blog</a> I mentioned in the beginning.</p>
-<h3 id="Create-deploy-folder-to-store-git-repository"><a href="#Create-deploy-folder-to-store-git-repository" class="headerlink" title="Create .deploy folder to store git repository"></a>Create .deploy folder to store git repository</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> d:/hexo/blog</div><div class="line">$ <span class="built_in">clone</span> https://github.com/username/username.github.io.git .deploy/username.github.io</div></pre></td></tr></table></figure>
-<p>This requires you already have a username.github.io repo set up in your github. </p>
-<h3 id="Create-a-deploy-shell-script"><a href="#Create-a-deploy-shell-script" class="headerlink" title="Create a deploy shell script"></a>Create a deploy shell script</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">hexo generate</div><div class="line">cp -R public/* .deploy/username.github.io</div><div class="line"><span class="built_in">cd</span> .deploy/username.github.io</div><div class="line">git add .</div><div class="line">git commit -m <span class="string">"update"</span></div><div class="line">git push origin master</div></pre></td></tr></table></figure>
-<p>Above script will first generate pages locally(/public folder) based on the changes you made. And then copy those pages(in public folder) to github repo folder. Then commit and push to remote repo.</p>
-<p>So everytime you made a change you could just run above deploy script rather than bunch of commands. So easy.<br>Another thing bothered me is everytime I push it will ask my username and password. If you dont want to input those everytime when you push you could do this. </p>
-<h3 id="Using-ssh-protocal-when-push-and-pull-from-git"><a href="#Using-ssh-protocal-when-push-and-pull-from-git" class="headerlink" title="Using ssh protocal when push and pull from git"></a>Using ssh protocal when push and pull from git</h3><p>First you need to set your public key in your github profile setting. You may find your public key by typing. Then copy it to your github ssh key setting.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cat ~/.ssh/id_rsa.pub</div></pre></td></tr></table></figure></p>
-<p>Then you need to make sure in your local you’re using ssh rather than https to push and pull.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git remote -v</div><div class="line"><span class="comment">#if the result of above command is using url start with https, then you need to change it by using below command</span></div><div class="line">$ git remote <span class="built_in">set</span>-url origin &lt;git@yourdomain.com&gt;</div></pre></td></tr></table></figure></p>
-<p>Set <em>git@</em> instead of <em>https://</em> in above command. </p>
-<p>Now have fun with your hexo~ :)</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/18/first-hexo-blog/">Read More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
 
 
@@ -599,8 +344,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

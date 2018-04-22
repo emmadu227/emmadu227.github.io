@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="https://emmadu227.github.io">
   <title>Java Class Basic | Welcome To Emma&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="StaticStatic var and static method are class level thing, which means they are the same to every instance of the class">
+  <meta name="description" content="StaticStatic var and static method are shared by all instances of the class. JAVA Polymorphism3 factors to implement polymorphism in Java:1.inheritance relationship2.override3.parent reference point t">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java Class Basic">
 <meta property="og:url" content="https://emmadu227.github.io/2017/09/25/java-class/index.html">
 <meta property="og:site_name" content="Welcome To Emma&#39;s Blog">
-<meta property="og:description" content="StaticStatic var and static method are class level thing, which means they are the same to every instance of the class">
-<meta property="og:updated_time" content="2018-03-04T02:46:36.516Z">
+<meta property="og:description" content="StaticStatic var and static method are shared by all instances of the class. JAVA Polymorphism3 factors to implement polymorphism in Java:1.inheritance relationship2.override3.parent reference point t">
+<meta property="og:updated_time" content="2018-04-08T02:31:55.476Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java Class Basic">
-<meta name="twitter:description" content="StaticStatic var and static method are class level thing, which means they are the same to every instance of the class">
+<meta name="twitter:description" content="StaticStatic var and static method are shared by all instances of the class. JAVA Polymorphism3 factors to implement polymorphism in Java:1.inheritance relationship2.override3.parent reference point t">
   
     <link rel="alternative" href="/atom.xml" title="Welcome To Emma&#39;s Blog" type="application/atom+xml">
   
@@ -192,7 +192,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Static<br>Static var and static method are class level thing, which means they are the same to every instance of the class</p>
+        <p>Static<br>Static var and static method are shared by all instances of the class.</p>
+<p>JAVA Polymorphism<br>3 factors to implement polymorphism in Java:<br>1.inheritance relationship<br>2.override<br>3.parent reference point to children object</p>
+<p>In above factors, the first item also include interface implementation.<br>Because interface implement actually is a way to do muti-inheritance.<br>The reason they can do things like item 3 is due to all their children class will “inherit” all parent methods.</p>
+<p>```java<br>public class Duck{<br>    public Duck(){…}<br>    public quack(){…}<br>    public walk(){…}<br>}</p>
+<p>public class GreenHeadDuck extends Duck{<br>    public GreenHeadDuck(){…}<br>    public fly(){…}<br>}</p>
+<p>public class Main{<br>    public static void main(String[] args) {<br>        Duck greenDuck = new GreenHeadDuck();<br>        greenDuck.quack(); //Compiler approve<br>        greenDuck.fly();  //Compiler will reject this because can’t find fly() for reference type Duck.<br>    }<br>}<br>``<br>compiler decide whether a method could be called based on reference type but not the object.</p>
 
       
 
